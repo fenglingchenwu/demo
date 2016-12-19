@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>canvas小房子</title>
+<style>
+#mycanvas{border:1px solid #f00;}
+</style>
+<script>
+function triangular(){
+var c=document.getElementById("mycanvas");
+var context=c.getContext("2d");
+context.scale(3,3);
+context.strokeStyle="#ff0";
+context.lineWith=4;
+context.beginPath();
+context.moveTo(30,80);
+context.lineTo(80,30);
+context.lineTo(130,80);
+context.lineTo(30,80);
+context.lineTo(30,180);
+context.lineTo(130,180);
+context.lineTo(130,80);
+context.moveTo(105,55);
+context.lineTo(105,30);
+context.lineTo(125,30);
+context.lineTo(125,75);
+context.moveTo(40,90);
+context.lineTo(80,90);
+context.lineTo(80,130);
+context.lineTo(40,130);
+context.lineTo(40,90);
+context.moveTo(40,110);
+context.lineTo(80,110);
+context.moveTo(60,90);
+context.lineTo(60,130);
+context.moveTo(90,180);
+context.lineTo(90,120);
+context.lineTo(120,120);
+context.lineTo(120,180);
+context.stroke();
+context.closePath();
+context.beginPath();
+
+context.arc(113,145,5,0,Math.PI*2,true);
+context.stroke();
+context.closePath();
+}
+window.addEventListener("load",triangular,true);
+</script>
+</head>
+
+<body>
+<canvas id="mycanvas" height="550px" width="550px">
+</canvas>
+
+
+</body></html>
